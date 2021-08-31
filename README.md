@@ -35,7 +35,6 @@ Here is a diagram of the app's structure:
 The server-side is Django-based. 
 The main principle of the design is keeping the client-side as "thin" as possible.
 The main advantages of delegating most of the responsibilities to the server-side are:
-
 * Simple structure: Fewer classes; No need for client-side Database; less friction between different languages.
 * App update is not required when new functionality is applied, or when the UI is changed.
 * Accessibility of a variety of powerful technologies
@@ -70,5 +69,6 @@ Author
 Changelog
 ---------
 
+* 31/08/2021 - Update Readme.
 * 31/08/2021 - UI: Minor changes. Update Readme.
 * 31/08/2021 - First publish. Server-side only. Presents fake data.
