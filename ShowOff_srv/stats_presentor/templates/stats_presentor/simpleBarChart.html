@@ -4,52 +4,63 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
     
-  google.charts.load('current', {packages:['corechart']});
-  google.charts.setOnLoadCallback(drawStats);
+      google.charts.load('current', {packages:['corechart']});
+      google.charts.setOnLoadCallback(drawStats);
 
-  function drawStats() {
+      function drawStats() {
 
-   var data = new google.visualization.DataTable();
-   data.addColumn('string', 'user');
-   data.addColumn('number', 'Overall Hours');
-   data.addColumn('number', 'Distracting Hours');
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'user');
+      data.addColumn('number', 'Overall Hours');
+      data.addColumn('number', 'Distracting Hours');
 
-   {% for row in stats_table %}
-   data.addRow({{ row|safe }});
-   {% endfor %}
-  
-   var chartOptions = {
-    title: "{{title}}",
-    titleTextStyle: {color: 'black', fontSize: 25},
-    
-    legend: { 
-          position: 'top' 
+      {% for row in stats_table %}
+      data.addRow({{ row|safe }});
+      {% endfor %}
       
-        },
-   
-    chartArea:{left:'10%',width:'85%',height:'70%'},
-    fontSize: 32,
-   }
+      var chartOptions = {
+        title: "{{title}}",
+        titleTextStyle: {color: 'black', fontSize: 28},
+        hAxis: {title: "{{x_axis_label}}", titleTextStyle: {fontSize: 22, italic: false},},
+        
+        legend: { 
+              position: 'top' 
+          
+            },
+      
+        chartArea:{left:'15%',width:'85%',height:'75%'},
+        fontSize: 28,
+      }
 
-   
-   var chart = new google.visualization.BarChart(
-      document.getElementById('chart_div'));
-   chart.draw(data, chartOptions);
-  }
-
-
+      
+      var chart = new google.visualization.BarChart(
+          document.getElementById('chart_div'));
+      chart.draw(data, chartOptions);
+      }
     </script>
-  </head>
-  <body>
 
-    <h2>{{ open_msg_1 }}</br>
-     {{open_msg_2}} </h2>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;800&display=swap" rel="stylesheet">
     
-    <div id="chart_div" style=" width: 85%;
-    height: 85%; position: relative;
-    top: 0; right: 0; bottom: 0; left: 0; 
-    "></div>
-    <h2> {{ winner }} - {{winner_msg}}   {{ losser }} - {{losser_msg}} </h2>
+    <style>
+        html * {
+            font-family: 'Sora', sans-serif !important;
+        }
+    </style>
+ 
+  </head>
+
+  <body>
+ 
+    <h1>{{ open_msg_1 }}</br>
+     {{open_msg_2}} </h1>
+ 
+    
+    <div id="chart_div" style=" width: 95%; height: 80%; position: relative; top: 0; right: 0; bottom: 0; left: 0;"></div>
+    
+    <h1> {{ winner }} - {{winner_msg}}   {{ losser }} - {{losser_msg}} </h1>
+
   </body>
 </html>
 
