@@ -1,0 +1,17 @@
+<html>
+  <head>
+    
+  </head>
+  <body>
+
+    <h1>{{ open_msg }}</h1>
+     <ul>
+    {% for row in stats_table %}
+      <li>{{ row }}</li>
+    {% endfor %}
+
+    </ul>
+    <h2> {{ winner }} - {{winner_msg}}   {{ losser }} - {{losser_msg}} </h2>
+  </body>
+</html>
+

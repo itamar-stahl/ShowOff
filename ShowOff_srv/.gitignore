@@ -1,0 +1,39 @@
+###     Server Side gitignore      ###
+
+# Python #
+*.py[cod]
+*$py.class
+
+# Backup files # 
+*.bak 
+
+# Django #
+*.log
+*.pot
+*.pyc
+__pycache__
+db.sqlite3
+migrations
+media
+ShowOff_srv/settings.py
+
+# Unit test / coverage reports 
+htmlcov/ 
+.tox/ 
+.coverage 
+.coverage.* 
+.cache 
+.pytest_cache/ 
+nosetests.xml 
+coverage.xml 
+*.cover 
+.hypothesis/ 
+
+# Vscode #
+.vscode
+.history
+
+# Other #
+*Draft*.html
+
+
