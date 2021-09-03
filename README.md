@@ -10,7 +10,7 @@ A mobile screen is often a harmful enemy. It damages your hours of sleep, your h
 your attention to your closes ones and distracts your mind from the things you want
 to do.
 
-There are many screen time tracker apps. Yet, they all have one big vulnerability:
+There are many screen time tracker apps. Yet, they all suffer from one crucial vulnerability:
 They leave you alone in front of the enemy. What if it is stronger?
 
 Installing _ShowOff_ is an act of humbleness. It might be too optimistic to hope we can beat
