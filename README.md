@@ -38,8 +38,8 @@ The server-side is Django-based, responsible for the user and the data managemen
 
 The client-side is composed of a considerably simple Android app. The Scraper class is an Android background service responsible for collecting the usage data of the user. The Registration and the statistics Viewer classes are standard Android activities.
 
-Design consideration
---------------------
+Design considerations
+---------------------
 The main principle of the design is keeping the client-side as "thin" as possible.
 The main advantages of delegating most of the responsibilities to the server-side are:
 * Simple structure: Fewer classes; No need for client-side Database; less friction between different languages.
