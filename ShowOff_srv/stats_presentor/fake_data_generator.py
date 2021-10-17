@@ -3,9 +3,9 @@ import pandas as pd
 import numpy as np
 import datetime as dt
 import matplotlib.pyplot as plt
-from data_manager.models import *
-from ShowOff_srv.utils import *
-from ShowOff_srv.settings import *
+from data_manager.models import User, Group, Record
+from ShowOff_srv.utils import get_yesterday, MAX_USERS, MAX_DAYS, TimeRange, extract_period, get_month_ago, get_week_ago, df_to_db
+
 
 
 

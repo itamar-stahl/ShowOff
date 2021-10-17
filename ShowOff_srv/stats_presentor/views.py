@@ -2,7 +2,10 @@ from os import name
 from .fake_data_generator import FAKE_GROUP_NAME
 from django.shortcuts import render
 from django.http import HttpResponse
-from .stats_processor import *
+from ShowOff_srv.utils import TimeRange
+from .stats_processor import genarate_stats
+from user_manager.models import Group
+
 from .fake_data_generator import make_fake_db
 from django.db.models import Avg
 from django.db.models import Sum

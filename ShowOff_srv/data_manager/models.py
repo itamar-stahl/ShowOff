@@ -1,7 +1,4 @@
-from enum import unique
 from django.db import connection, models
-from django.db.models.base import Model
-from numpy import record
 from django.db import DatabaseError
 
 

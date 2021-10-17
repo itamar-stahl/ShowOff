@@ -1,7 +1,5 @@
 from ShowOff_srv.settings import DATABASES
 import datetime as dt
-
-import pandas as pd
 import sqlite3
 from enum import Enum
 

@@ -1,11 +1,7 @@
-from ShowOff_srv.utils import *
-from ShowOff_srv.utils import Estimetor, TimeRange
-import numpy as np
+from ShowOff_srv.utils import Estimetor, TimeRange, extract_period
 
-from data_manager.models import *
-from user_manager.models import *
-import datetime as dt
-
+from data_manager.models import Record, MissingRecords
+from user_manager.models import User, Group
 
 
 

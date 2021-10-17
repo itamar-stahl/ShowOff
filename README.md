@@ -26,13 +26,20 @@ This is how the _ShowOff_ app's statistics viewer looks like:
 
 ![Screenshots from ShowOff](readme_img/animated_screen_shots.png)
 
+The "Overall hours" bar measures the overall screentime of the user in the specified period. The "Distracting hours" bar, however, measures only the accumulated usage time of apps defined as distracting, such as Instagram, Twitter, etc.
+
 Structure
 ---------
 Here is a diagram of the app's structure:
 
 ![ShowOff's struture](readme_img/app_structure.jpg)
 
-The server-side is Django-based. 
+The server-side is Django-based, responsible for the user and the data management. It also includes the statistics presenter class, responsible for retrieving the data from the database, processing it, and rendering an HTML page uses the [Google Charts JavaScript library](https://developers.google.com/chart) to present a bars chart as presented above.
+
+The client-side is composed of a considerably simple Android app. The Scraper class is an Android background service responsible for collecting the usage data of the user. The Registration and the statistics Viewer classes are standard Android activities.
+
+Design consideration
+--------------------
 The main principle of the design is keeping the client-side as "thin" as possible.
 The main advantages of delegating most of the responsibilities to the server-side are:
 * Simple structure: Fewer classes; No need for client-side Database; less friction between different languages.
@@ -43,16 +50,16 @@ Tasks
 -----
 The following parts of the project are not yet completed:
 
-Client-side: 
-
-* All
-
 Server-side:
 * User registration
 * Group registration
 * Integration of the User and Group Models within the built-in Django's authentication and authorization
 * Usage data receiver 
 
+Client-side: 
+* Registration
+* Scraper
+* Statistics Viewer
 
 Features
 --------
@@ -66,9 +73,7 @@ Author
 ------
 [Itamar Stahl](https://github.com/itamar-stahl)
 
-Changelog
+Changelog (major changes)
 ---------
 
-* 31/08/2021 - Update Readme.
-* 31/08/2021 - UI: Minor changes. Update Readme.
 * 31/08/2021 - First publish. Server-side only. Presents fake data.
