@@ -34,7 +34,7 @@ Here is a diagram of the app's structure:
 
 ![ShowOff's struture](readme_img/app_structure.jpg)
 
-The server-side is Django-based, responsible for the user and the data management. It also includes the statistics presenter class, responsible for retrieving the data from the database, processing it, and rendering an HTML page uses the [Google Charts JavaScript library](https://developers.google.com/chart) to present a bars chart as presented above.
+The server-side is Django-based, responsible for the user and the data management. It also includes the statistics presenter class, responsible for retrieving the data from the database, processing it, and rendering an HTML page using the [Google Charts JavaScript library](https://developers.google.com/chart) to present a bars chart as presented above.
 
 The client-side is composed of a considerably simple Android app. The Scraper class is an Android background service responsible for collecting the usage data of the user. The Registration and the statistics Viewer classes are standard Android activities.
 
